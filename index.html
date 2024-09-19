@@ -1,11 +1,55 @@
-<html>
-  <div>
-    <button><a href="https://raw.githubusercontent.com/marhau-dev/Tweaky/main/repo.json"></a> Add repo to scarlet </button>
-  </div> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweaky</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #add-repo-button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #add-repo-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Your Repository</h1>
+    <button id="add-repo-button">Add Repository</button>
+    <p id="message"></p>
 
+    <script>
+        document.getElementById('add-repo-button').addEventListener('click', function() {
+            const repoUrl = 'https://raw.githubusercontent.com/marhau-dev/Tweaky/main/repo.json'; // Replace with your repo URL
 
-
-
-
-  
+            fetch('/api/add-repo', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ url: repoUrl })
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('message').innerText = 'Repository added successfully!';
+                } else {
+                    document.getElementById('message').innerText = 'Failed to add repository.';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('message').innerText = 'An error occurred.';
+            });
+        });
+    </script>
+</body>
 </html>
