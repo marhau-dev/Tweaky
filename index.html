@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tweaky</title>
+    <title>Add Repository to Scarlet</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        #add-repo-button {
+        #open-scarlet-button {
             padding: 10px 15px;
             background-color: #4CAF50;
             color: white;
@@ -17,38 +17,30 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        #add-repo-button:hover {
+        #open-scarlet-button:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h1>Add Your Repository</h1>
-    <button id="add-repo-button">Add Repository</button>
-    <p id="message"></p>
+    <h1>Add Repository to Scarlet</h1>
+    <input type="text" id="repo-url" placeholder="Enter repository URL" />
+    <button id="open-scarlet-button">Open Scarlet</button>
 
     <script>
-        document.getElementById('add-repo-button').addEventListener('click', function() {
-            const repoUrl = 'https://raw.githubusercontent.com/marhau-dev/Tweaky/main/repo.json'; // Replace with your repo URL
+        document.getElementById('open-scarlet-button').addEventListener('click', function() {
+            const repoUrl = document.getElementById('repo-url').value;
 
-            fetch('/api/add-repo', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ url: repoUrl })
-            })
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('message').innerText = 'Repository added successfully!';
-                } else {
-                    document.getElementById('message').innerText = 'Failed to add repository.';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('message').innerText = 'An error occurred.';
-            });
+            if (!repoUrl) {
+                alert('https://raw.githubusercontent.com/marhau-dev/Tweaky/main/repo.json');
+                return;
+            }
+
+            // Assuming Scarlet supports a URL scheme like this
+            const scarletUrl = `scarlet://add-repo?url=${encodeURIComponent(repoUrl)}`;
+
+            // Open Scarlet app
+            window.location.href = scarletUrl;
         });
     </script>
 </body>
