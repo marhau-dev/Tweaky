@@ -1,18 +1,40 @@
+
 {
-    "META": {
-      "repoName": "Tweaky Repo",
-      "repoIcon": "https://github.com/marhau-dev/Tweaky/blob/main/logo.png?raw=true"
-    },
-    "Apps": [
-      {
-        "name": "Spotify++ (Eevee)",
-        "version": "6.2-8.9.76",
-        "download": "https://ia600102.us.archive.org/13/items/eevee-spotify/EeveeSpotify.ipa",
-        "category": "Tweaked Apps",
-        "description": "Spotify with a free premium and unlimited skips exept no song downloads ",
-        "screenshot": "https://github.com/whoeevee/EeveeSpotify/raw/swift/Images/banner.png",
-        "icon": "https://github.com/marhau-dev/Tweaky/blob/main/spicon.png?raw=true"
-      }
-    ]
-  }
-  
+    "repository": {
+        "name": "Tweaky Repo",
+        "description": "This repository contains an tweaked applications and games.",
+        "url": "https://marhau-dev.github.io/Tweaky/",
+        "visibility": "public",
+        "languages": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "owner": {
+            "username": "marhau",
+            "email": "marhaudev@gmail.com"
+        },
+        "created_at": "2024-09-19T12:00:00Z",
+        "updated_at": "2024-09-19T12:00:00Z",
+        "tags": [
+            "demo",
+            "apps",
+            "scarlet"
+        ],
+        "applications": [
+            {
+                "app_name": "Spotify++ (Eevee)",
+                "description": "Spotify with a free premium and unlimited skips",
+                "version": "6.2-8.9.76",
+                "url": "https://github.com/marhau-dev/Tweaky",
+                "dependencies": [
+                    "express",
+                    "axios"
+                ],
+                "screenshots": [
+                    "https://github.com/marhau-dev/Tweaky/blob/ipas/spotifyscreen.jpg?raw=true"
+                ]
+            }
+        ]
+    }
+}
