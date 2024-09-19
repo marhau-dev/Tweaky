@@ -1,16 +1,16 @@
 {
     "META": {
       "repoName": "Tweaky Repo",
-      "repoIcon": "https://usescarlet.com/favicon.png"
+      "repoIcon": "https://github.com/marhau-dev/Tweaky/blob/main/logo.png?raw=true"
     },
     "Apps": [
       {
         "name": "Spotify++ (Eevee)",
         "version": "6.2-8.9.76",
-        "download": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.2/EeveeSpotify-5.2-8.9.76.ipa",
+        "download": "https://ia600102.us.archive.org/13/items/eevee-spotify/EeveeSpotify.ipa",
         "category": "Tweaked Apps",
         "description": "Spotify with a free premium and unlimited skips exept no song downloads ",
-        "screenshot": "https://example.com/screenshot.png",
+        "screenshot": "https://github.com/whoeevee/EeveeSpotify/raw/swift/Images/banner.png",
         "icon": "https://github.com/marhau-dev/Tweaky/blob/main/spicon.png?raw=true"
       }
     ]
