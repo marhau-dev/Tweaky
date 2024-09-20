@@ -7,7 +7,7 @@
     {
       "name": "Spotify++ (Eevee)",
       "version": "6.2-8.9.76",
-      "icon": "spicon.png",
+      "icon": "https://github.com/marhau-dev/Tweaky/blob/main/spicon.png?raw=true",
       "down": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.2/EeveeSpotify-5.2-8.9.76.ipa",
       "dev": "whoeevee",
       "category": "Tweaked Apps",
